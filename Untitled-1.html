@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte des parcelles cadastrales de Forcalquier</title>
+    
+    <!-- Importation des feuilles de style pour Leaflet (bibliothèque de cartographie) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <style>
+        /* Définition de la hauteur de la carte */
+        #map {
+            height: 800px;
+        }
+        
+        /* Style pour la section des contrôles */
+        #controls {
+            margin-bottom: 10px;
+        }
+        
+        /* Style pour les messages d'erreur */
+        #error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carte des parcelles cadastrales de Forcalquier</h1>
+    
+    <!-- Section des contrôles pour interagir avec la carte -->
+    <div id="controls">
+        <!-- Champ pour entrer la section cadastrale -->
+        <label for="section">Section : </label>
+        <input type="text" id="section" placeholder="Entrez la section">
+        
+        <!-- Champ pour entrer le numéro de parcelle -->
+        <label for="numero">Numéro : </label>
+        <input type="text" id="numero" placeholder="Entrez le numéro">
+        
+        <!-- Bouton pour zoomer sur la parcelle spécifique -->
+        <button id="zoomButton">Zoom sur la parcelle</button>
+        
+        <!-- Affichage des messages d'erreur -->
+        <div id="error-message"></div>
+        
+        <!-- Champ pour entrer le code du département -->
+        <label for="departement">Département : </label>
+        <input type="text" id="departement" placeholder="Entrez le code département">
+        <button id="loadDepartementButton">Charger le département</button>
+        
+        <!-- Champ pour entrer le code INSEE de la commune -->
+        <label for="commune">Code Commune : </label>
+        <input type="text" id="commune" placeholder="Entrez le code commune">
+        <button id="loadCommuneButton">Charger la commune</button>
+    </div>
+    
+    <!-- Conteneur où sera affichée la carte -->
+    <div id="map"></div>
+    
+    <!-- Importation des scripts nécessaires -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.2/proj4.js"></script>
+    <script src="script.js"></script> <!-- Fichier JavaScript externe pour la gestion de la carte -->
+</body>
+</html>
