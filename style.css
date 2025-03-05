@@ -1,6 +1,6 @@
  /* Définition de la hauteur de la carte */
         #map {
-            max-height: 80%; /* 80% de la hauteur de la fenêtre */
+            height: 60%; /* 80% de la hauteur de la fenêtre */
             width: 100%; /* Largeur complète de l'écran */
           justify-content: center;
         }
