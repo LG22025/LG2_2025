@@ -52,8 +52,7 @@ h1 {
 
   #map {
 
-        height: 80vh; /* 80% de la hauteur de la fenêtre */
-        width: 100%; /* Largeur complète de l'écran */
+        
       justify-content: center;
   }
 
