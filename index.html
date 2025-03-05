@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carte des parcelles cadastrales de Forcalquier</title>
@@ -27,34 +28,41 @@
     </style>
 </head>
 <body>
-    <h1>Carte des parcelles cadastrales de Forcalquier</h1>
+    <h1>Carte des parcelles cadastrales des communes <br> de France</h1>
+    <div>
+    <h2> Un projet réalisé par: Elise Bouillie, Tierno N'Diaye, Aurélien Peckre & Arthur Vandeputte <br> LG2 </h2> 
+    <div class="container">
+    <h2>MARS 2025</h2>
+    </div>
+    
+    <img src=https://igm.univ-gustave-eiffel.fr/fileadmin/_processed_/6/7/csm_ENSG-RVB-couleurs-72dpi_61d0fc3419.png class="image">
+
+</div>
+
     
     <!-- Section des contrôles pour interagir avec la carte -->
     <div id="controls">
-        <!-- Champ pour entrer la section cadastrale -->
-        <label for="section">Section : </label>
-        <input type="text" id="section" placeholder="Entrez la section">
         
-        <!-- Champ pour entrer le numéro de parcelle -->
-        <label for="numero">Numéro : </label>
-        <input type="text" id="numero" placeholder="Entrez le numéro">
+
+            <div id="controls">
+                <!-- Champ pour le code du département -->
+                <label for="departement">Département : </label>
+                <input type="text" id="departement" placeholder="Entrez le code département">
+                <button id="loadDepartementButton">Valider le département</button>
         
-        <!-- Bouton pour zoomer sur la parcelle spécifique -->
-        <button id="zoomButton">Zoom sur la parcelle</button>
+                <!-- Champ pour le code de la commune -->
+                <label for="commune">Code Commune : </label>
+                <input type="text" id="commune" placeholder="Entrez le code commune">
+                <button id="loadCommuneButton">Valider la commune</button>
         
-        <!-- Affichage des messages d'erreur -->
-        <div id="error-message"></div>
+                <label for="section">Section : </label>
+                <input type="text" id="section" placeholder="Entrez la section">
+                <label for="numero">Numéro : </label>
+                <input type="text" id="numero" placeholder="Entrez le numéro">
+                <button id="zoomButton">Zoom sur la parcelle</button>
+                <div id="error-message"></div>
         
-        <!-- Champ pour entrer le code du département -->
-        <label for="departement">Département : </label>
-        <input type="text" id="departement" placeholder="Entrez le code département">
-        <button id="loadDepartementButton">Charger le département</button>
-        
-        <!-- Champ pour entrer le code INSEE de la commune -->
-        <label for="commune">Code Commune : </label>
-        <input type="text" id="commune" placeholder="Entrez le code commune">
-        <button id="loadCommuneButton">Charger la commune</button>
-    </div>
+            </div>
     
     <!-- Conteneur où sera affichée la carte -->
     <div id="map"></div>
