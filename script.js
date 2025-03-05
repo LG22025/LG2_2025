@@ -29,7 +29,7 @@ function loadCommuneData() {
     function fetchPage(startIndex) {
         // Construction de l'URL de requête vers l'API
         const url = `https://data.geopf.fr/wfs/ows?SERVICE=WFS&TYPENAMES=BDPARCELLAIRE-VECTEUR_WLD_BDD_WGS84G:parcelle&REQUEST=getFeature&VERSION=2.0.0&OUTPUTFORMAT=application/json&cql_filter=code_dep='${departementCode}' AND code_com='${communeCode}'&startIndex=${startIndex}&count=${count}`;
-        console.log('URL de la requête :', url);
+        
 
         // Envoi de la requête à l'API
         fetch(url)
@@ -62,7 +62,7 @@ function loadCommuneData() {
 
     // Fonction pour afficher les parcelles sur la carte
     function displayFeatures(features) {
-        console.log('Affichage des parcelles ');
+        
         
         // Supprimer la couche précédente si elle existe
         if (geojsonLayer) {
