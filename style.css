@@ -2,6 +2,7 @@
         #map {
             height: 100vh; /* 80% de la hauteur de la fenêtre */
             width: 100%; /* Largeur complète de l'écran */
+          justify-content: center;
         }
         
         /* Style pour la section des contrôles */
@@ -67,13 +68,7 @@ h1 {
 
   }
 
-  #map {
-
-        
-      justify-content: center;
-  }
-
-
+ 
   .mars2025 {
     position: absolute;
     top: 70px;
