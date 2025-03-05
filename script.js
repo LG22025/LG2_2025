@@ -40,7 +40,7 @@ function loadCommuneData() {
                 return response.json();
             })
             .then(data => {
-                console.log('Données reçues :', data);
+                console.log('Données reçues ');
                 
                 // Vérification que des données sont retournées
                 if (data.features.length > 0) {
@@ -62,7 +62,7 @@ function loadCommuneData() {
 
     // Fonction pour afficher les parcelles sur la carte
     function displayFeatures(features) {
-        console.log('Affichage des parcelles :', features);
+        console.log('Affichage des parcelles ');
         
         // Supprimer la couche précédente si elle existe
         if (geojsonLayer) {
@@ -83,7 +83,7 @@ function loadCommuneData() {
                 };
             },
             onEachFeature: function (feature, layer) {
-                console.log('Feature :', feature);
+                
                 if (feature.properties && feature.properties.numero && feature.properties.section) {
                     layer.bindPopup(`Section: ${feature.properties.section}, Numéro: ${feature.properties.numero}`);
                 } else {
@@ -117,7 +117,7 @@ function zoomToParcelle() {
     if (geojsonLayer) {
         geojsonLayer.eachLayer(function (layer) {
             const properties = layer.feature.properties;
-            console.log('Vérification de la feature :', properties);
+            
 
             // Comparaison avec les données saisies
             if (properties.section && properties.numero) {
